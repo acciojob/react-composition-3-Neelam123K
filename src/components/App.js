@@ -1,23 +1,33 @@
+App.js
 
 import React from "react";
-import './../styles/App.css';
-import Tooltrip from "./Tooltrip";
+import Tooltip from "./Tooltip";
+import "../styles/Tooltip.css";
 
-const App = () => {
+function App() {
   return (
-    <div style={{ padding: '50px', textAlign: 'center' }}>
-        {/* Do not remove the main div */}
-        <Tooltrip text="This is a tooltip!">
-          <h2>Hover over me</h2>
-        </Tooltrip>
+    <div style={{ padding: "50px" }}>
+      
+      <h2 className="tooltip">
+        <div>
+        <Tooltip text="This is a tooltip for the button!">
+          Hover over me
+        </Tooltip>
+        </div>
+      </h2>
 
-        <br/>
+      <p className="tooltip">
+        <Tooltip text="This is another tooltip">
+          Hover over this paragraph to see a tooltip.
+        </Tooltip>
+      </p>
 
-        <Tooltrip text="Another tooltip message">
-          <p>Hower over me to see another tooltip</p>
-        </Tooltrip>
+
+      {/* <h2 className="tooltip">
+        <Tooltip text="Even icons can have tooltips!">Lorem2</Tooltip>
+      </h2> */}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
